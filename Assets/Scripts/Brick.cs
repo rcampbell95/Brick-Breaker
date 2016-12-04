@@ -12,15 +12,18 @@ public class Brick : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	  if(timesHit == maxHits)
+        
+	  if(timesHit >= maxHits)
     {
-            Destroy(this);
+            Destroy(gameObject);
 
     }
 	}
 
-    void OnCOllisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         timesHit++;
+        print("Collision with brick: " + timesHit + "Maxhits: " + maxHits);
     }
+
 }

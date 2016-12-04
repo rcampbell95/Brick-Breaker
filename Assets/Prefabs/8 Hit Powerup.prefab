@@ -23,7 +23,7 @@ GameObject:
   - 61: {fileID: 61000013586306508}
   - 114: {fileID: 114000010222092830}
   m_Layer: 0
-  m_Name: 2 hit
+  m_Name: 8 Hit Powerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c100faf432f747041a1f588719a936a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHits: 2
+  maxHits: 8
 --- !u!212 &212000011635341428
 SpriteRenderer:
   m_ObjectHideFlags: 1
