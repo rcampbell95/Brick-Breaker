@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Ball : MonoBehaviour {
-    public Paddle paddle;
+    private Paddle paddle;
 
     private Vector3 paddleToBallVector;
 
@@ -12,6 +12,7 @@ public class Ball : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        paddle = GameObject.FindObjectOfType<Paddle>();
         paddleToBallVector = this.transform.position - paddle.transform.position;
 	}
 	
@@ -25,7 +26,7 @@ public class Ball : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 rigidbody = GetComponent<Rigidbody2D>();
-                rigidbody.velocity = new Vector2(2f, 10f);
+                rigidbody.velocity = new Vector2(2f, 8f);
 
                 hasStarted = true;
             }
