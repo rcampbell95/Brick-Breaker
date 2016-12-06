@@ -2,12 +2,16 @@
 using System.Collections;
 
 public class Brick : MonoBehaviour {
+    private LevelManager levelManager;
+
     public int maxHits;
     private int timesHit;
 
 	// Use this for initialization
 	void Start () {
         timesHit = 0;
+
+        levelManager = GameObject.FindObjectOfType<LevelManager>();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +28,13 @@ public class Brick : MonoBehaviour {
     {
         timesHit++;
         print("Collision with brick: " + timesHit + "Maxhits: " + maxHits);
+
+        SimulateWin();
+    }
+
+    void SimulateWin()
+    {
+        levelManager.LoadNextLevel();
     }
 
 }

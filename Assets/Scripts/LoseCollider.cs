@@ -11,8 +11,7 @@ public class LoseCollider : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Trigger");
-        levelManager.LoadLevel("Win Screen");
+        levelManager.LoadLevel("Lose Screen");
     }
 
 }
