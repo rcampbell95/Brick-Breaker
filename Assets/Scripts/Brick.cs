@@ -29,7 +29,7 @@ public class Brick : MonoBehaviour {
         timesHit++;
         print("Collision with brick: " + timesHit + "Maxhits: " + maxHits);
 
-        SimulateWin();
+        //SimulateWin();
     }
 
     void SimulateWin()
